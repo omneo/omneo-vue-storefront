@@ -1,12 +1,12 @@
 {
-  "name": "ecommerce-__replace_me__-integration",
+  "name": "ecommerce-omneo-integration",
   "private": true,
   "license": "MIT",
   "engines": {
     "node": ">=14.17.x"
   },
   "scripts": {
-    "build": "yarn build:api-client && yarn build:composables && yarn build:theme",
+    "build": "yarn build:api-client && yarn build:composables",
     "build:api-client": "cd packages/api-client && yarn build",
     "build:composables": "cd packages/composables && yarn build",
     "build:theme": "cd packages/theme && yarn build",
@@ -39,7 +39,7 @@
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.6",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
-    "@typescript-eslint/parser": "^5.2.0",
+    "@typescript-eslint/par": "^5.2.0",
     "@vue/eslint-config-typescript": "^9.0.0",
     "all-contributors-cli": "^6.20.0",
     "commitizen": "^4.2.4",

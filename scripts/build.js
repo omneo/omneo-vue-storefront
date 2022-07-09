@@ -10,7 +10,6 @@ function cwdResolve(name) {
 }
 
 const pkg = require(cwdResolve('package.json'));
-
 esbuild.build({
   entryPoints: [
     cwdResolve(argv.file)
@@ -22,7 +21,12 @@ esbuild.build({
   sourcemap: true,
   platform: 'node',
   target: 'node16',
-  watch: Boolean(argv.watch),
+  watch: {
+    onRebuild(error, result) {
+      if (error) console.error('watch build failed:', error)
+      else console.log('watch build succeeded:', result)
+    }
+  },
   logLevel: 'warning',
   external: [
     ...Object.keys(pkg.dependencies || {}),
