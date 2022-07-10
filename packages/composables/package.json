@@ -23,15 +23,16 @@
     "update:update": "ncu -u"
   },
   "dependencies": {
-    "@vue-storefront/omneo-api": "0.0.1",
-    "@vue-storefront/core": "~2.5.4"
+    "@vue-storefront/core": "~2.5.4",
+    "@vue-storefront/omneo-api": "0.0.1"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.0.6",
-    "rollup-plugin-typescript2": "^0.30.0"
+    "rollup-plugin-typescript2": "^0.30.0",
+    "@nuxtjs/composition-api": "^0.33.0"
   },
   "peerDependencies": {
-    "@nuxtjs/composition-api": "^0.29.3"
+    "@nuxtjs/composition-api": "^0.33.0"
   },
   "files": [
     "lib/**/*"
