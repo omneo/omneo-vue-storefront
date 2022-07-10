@@ -1,3 +1,4 @@
+
 /* eslint-disable */
 const path = require('path');
 const esbuild = require('esbuild');
@@ -10,6 +11,7 @@ function cwdResolve(name) {
 }
 
 const pkg = require(cwdResolve('package.json'));
+
 esbuild.build({
   entryPoints: [
     cwdResolve(argv.file)
@@ -21,12 +23,7 @@ esbuild.build({
   sourcemap: true,
   platform: 'node',
   target: 'node16',
-  watch: {
-    onRebuild(error, result) {
-      if (error) console.error('watch build failed:', error)
-      else console.log('watch build succeeded:', result)
-    }
-  },
+  watch: Boolean(argv.watch),
   logLevel: 'warning',
   external: [
     ...Object.keys(pkg.dependencies || {}),
