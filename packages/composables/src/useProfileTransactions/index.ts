@@ -9,8 +9,7 @@ export const useProfileTransactions = () => {
   const transactions = sharedRef(null, 'transactions');
 
   const error = sharedRef({
-    search: null,
-    redeem: null
+    search: null
   }, 'transactions-error');
 
   const search = async () => {
