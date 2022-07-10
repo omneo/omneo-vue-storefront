@@ -77,9 +77,3 @@ jobs:
 
       - name: Test composables
         run: yarn test:composables
-
-      - name: Build theme
-        run: yarn build:theme
-
-      - name: Test theme
-        run: yarn test:theme
