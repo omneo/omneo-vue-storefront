@@ -1,13 +1,3 @@
-# Boilerplate for Vue Storefront 2 eCommerce integration
-
-This is a template, to use it you must rename the project changing the `{YOUR INTEGRATION NAME}` to the name of the integration you are developing. The name must be in lowercase and without any special characters.
-
-```sh
-grep -rl 'omneo' ./ | xargs sed -i '' 's/omneo/{YOUR INTEGRATION NAME}/g'
-```
-
-------
-
 <div align="center">
   <img src="https://user-images.githubusercontent.com/1626923/137092657-fb398d20-b592-4661-a1f9-4135db0b61d5.png" alt="Vue Storefront" height="80px" />
 </div>
