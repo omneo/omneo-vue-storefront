@@ -1,4 +1,4 @@
-import type { Profile } from '@vue-storefront/omneo-api/src/types';
+import type { Profile } from '@omneo/omneo-vue-storefront-api/src/types';
 
 function getFirstName(Profile: Profile): string {
   return Profile?.first_name || '';

@@ -18,7 +18,7 @@ The below can be obtained from your Omneo administrator
 module.exports = {
   integrations: {
     omneo: {
-      location: '@vue-storefront/omneo-api/server',
+      location: '@omneo/omneo-vue-storefront-api/server',
       configuration: {
         api: {
           url: `https://api.${process.env.OMNEO_TENANT}.getomneo.com/`,

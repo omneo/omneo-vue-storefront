@@ -1,5 +1,5 @@
 {
-  "name": "@vue-storefront/omneo",
+  "name": "@omneo/omneo-vue-storefront",
   "version": "0.0.1",
   "private": false,
   "sideEffects": false,
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@vue-storefront/core": "~2.5.4",
-    "@vue-storefront/omneo-api": "0.0.1"
+    "@omneo/omneo-vue-storefront-api": "0.0.1"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.0.6",

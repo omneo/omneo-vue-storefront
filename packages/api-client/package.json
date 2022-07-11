@@ -1,5 +1,5 @@
 {
-  "name": "@vue-storefront/omneo-api",
+  "name": "@omneo/omneo-vue-storefront-api",
   "version": "0.0.1",
   "private": false,
   "sideEffects": false,

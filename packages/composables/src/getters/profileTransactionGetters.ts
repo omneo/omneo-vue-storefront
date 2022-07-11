@@ -1,4 +1,4 @@
-import type { Transaction } from '@vue-storefront/omneo-api/src/types';
+import type { Transaction } from '@omneo/omneo-vue-storefront-api/src/types';
 
 function getTransactedDate(transaction: Transaction): Date {
   return transaction?.transacted_at;
