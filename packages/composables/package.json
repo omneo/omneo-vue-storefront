@@ -1,6 +1,6 @@
 {
   "name": "@omneo/omneo-vue-storefront",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "private": false,
   "sideEffects": false,
   "main": "./lib/index.js",
@@ -35,7 +35,8 @@
     "@nuxtjs/composition-api": "^0.29.3"
   },
   "files": [
-    "lib/**/*"
+    "lib/**/*",
+    "nuxt/**/*"
   ],
   "publishConfig": {
     "access": "public"

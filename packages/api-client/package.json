@@ -1,6 +1,6 @@
 {
   "name": "@omneo/omneo-vue-storefront-api",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "private": false,
   "sideEffects": false,
   "main": "./lib/index.js",
@@ -31,7 +31,8 @@
     "concurrently": "^7.0.0"
   },
   "files": [
-    "lib/**/*"
+    "lib/**/*",
+    "server/**/*"
   ],
   "publishConfig": {
     "access": "public"
