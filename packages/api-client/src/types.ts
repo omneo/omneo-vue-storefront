@@ -13,8 +13,8 @@ export type Profile = {
     comms: { [key: string]: string },
     appearance: { [key: string]: string },
   },
-  statuses: Array<{ [key: string]: string }>,
-  tags: Array<{ [key: string]: string }>,
+  statuses: Array<string>,
+  tags: Array<string>,
   joined_location: { [key: string]: string },
   preferred_location: { [key: string]: string }
 };

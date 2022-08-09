@@ -33,21 +33,55 @@ function getOptInStatus(Profile: Profile, commsMethod: 'email' | 'sms' | 'phone'
 }
 
 function getTags(Profile: Profile): Array<string> {
-  if (!Profile?.statuses) return [];
-  return Profile.tags.map((tag) => tag.handle);
+  if (!Profile?.tags) return [];
+  return Profile.tags;
 }
 
 function getStatuses(Profile: Profile): Array<string> {
-  if (!Profile?.tags) return [];
-  return Profile.statuses.map((status) => status.handle);
+  if (!Profile?.statuses) return [];
+  return Profile.statuses;
 }
 
 function getJoinedLocation(Profile: Profile): any {
   return Profile?.joined_location || {};
 }
 
+function getJoinedLocationName(Profile: Profile): string {
+  return Profile?.joined_location?.name || '';
+}
+
+function getJoinedLocationID(Profile: Profile): string {
+  if (!Profile?.joined_location) return '';
+  return Profile?.joined_location?.id.toString();
+}
+
+function getJoinedLocationExternalID(Profile: Profile): string {
+  return Profile?.joined_location?.external_id || '';
+}
+
+function getJoinedLocationExternalCode(Profile: Profile): string {
+  return Profile?.joined_location?.external_code || '';
+}
+
 function getPreferredLocation(Profile: Profile): any {
   return Profile?.preferred_location || {};
+}
+
+function getPreferredLocationName(Profile: Profile): string {
+  return Profile?.preferred_location?.name || '';
+}
+
+function getPreferredLocationID(Profile: Profile): string {
+  if (!Profile?.preferred_location) return '';
+  return Profile?.preferred_location?.id.toString();
+}
+
+function getPreferredLocationExternalID(Profile: Profile): string {
+  return Profile?.preferred_location?.external_id || '';
+}
+
+function getPreferredLocationExternalCode(Profile: Profile): string {
+  return Profile?.preferred_location?.external_code || '';
 }
 
 export const profileGetters = {
@@ -60,5 +94,13 @@ export const profileGetters = {
   getStatuses,
   getTags,
   getJoinedLocation,
-  getPreferredLocation
+  getJoinedLocationName,
+  getJoinedLocationID,
+  getJoinedLocationExternalID,
+  getJoinedLocationExternalCode,
+  getPreferredLocation,
+  getPreferredLocationName,
+  getPreferredLocationID,
+  getPreferredLocationExternalID,
+  getPreferredLocationExternalCode
 };
