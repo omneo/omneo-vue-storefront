@@ -1,6 +1,6 @@
 export async function getProfileBenefits(context: {config: any, client: any}, token: string): Promise<any> {
 
-  const url = new URL('/id/api/v1/profiles/me/rewards', context.config.api.url);
+  const url = new URL('/id/api/v1/profiles/me/benefits', context.config.api.url);
 
   const config = {
     headers: {
