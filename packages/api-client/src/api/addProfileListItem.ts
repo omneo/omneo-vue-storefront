@@ -1,6 +1,6 @@
-export async function createProfileList(context: {config: any, client: any}, token: string, params: object): Promise<any> {
+export async function addProfileListItem(context: {config: any, client: any}, token: string, handle: string, params: object): Promise<any> {
 
-  const url = new URL('/id/api/v1/profiles/me/lists', context.config.api.url);
+  const url = new URL(`/id/api/v1/profiles/me/lists/${handle}/items`, context.config.api.url);
 
   const config = {
     headers: {
@@ -14,7 +14,7 @@ export async function createProfileList(context: {config: any, client: any}, tok
 
   const {data: {data}} = await context.client.post(url.href, body, config).catch((error) => {
     console.log(error);
-    return Promise.reject('Cannot create profile lists');
+    return Promise.reject(`Cannot add list item to list ${handle}`);
   });
 
   return data;

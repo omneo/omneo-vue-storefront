@@ -15,6 +15,11 @@ import { updateProfile } from './api/updateProfile';
 import { updateProfileComms } from './api/updateProfileComms';
 import { createProfileList } from './api/createProfileList';
 import { redeemReward } from './api/redeemReward';
+import { getProfileTiers } from './api/getProfileTiers';
+import { addProfileListItem } from './api/addProfileListItem';
+import { updateProfileListItem } from './api/updateProfileListItem';
+import { removeProfileListItem } from './api/removeProfileListItem';
+import { updateProfileList } from './api/updateProfileList';
 
 const onCreate = (settings) => {
   const client = axios.create({
@@ -45,7 +50,12 @@ const { createApiClient } = apiClientFactory<Setttings, Endpoints>({
     updateProfile,
     updateProfileComms,
     createProfileList,
-    redeemReward
+    redeemReward,
+    getProfileTiers,
+    addProfileListItem,
+    updateProfileListItem,
+    removeProfileListItem,
+    updateProfileList
   }
 });
 

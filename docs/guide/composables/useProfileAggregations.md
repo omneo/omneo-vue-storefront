@@ -1,6 +1,6 @@
-# useAggregations
+# useProfileAggregations
 
-`useAggregations` is a custom composable which is responsible for loading aggregations against an authenticated Omneo profile
+`useProfileAggregations` is a custom composable which is responsible for loading aggregations against an authenticated Omneo profile
 
 ## API 
 
@@ -9,6 +9,6 @@ Hydrates the `aggregations` object with the [Omneo aggregations](https://omneo.r
 - `aggregations`
 An object containing the aggregations
 - `loading`
-Denotes whether the useAggregations composable is loading
+Denotes whether the useProfileAggregations composable is loading
 - `error`
 An object containing errors for each of the methods described above

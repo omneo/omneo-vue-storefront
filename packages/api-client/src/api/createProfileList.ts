@@ -13,7 +13,7 @@ export async function createProfileList(context: {config: any, client: any}, tok
   };
 
   const {data: {data}} = await context.client.post(url.href, body, config).catch((error) => {
-    console.log(error);
+    console.log(error.response.data);
     return Promise.reject('Cannot create profile lists');
   });
 
